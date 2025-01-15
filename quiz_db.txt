@@ -1,0 +1,19 @@
+create database quiz_db;
+
+use quiz_db;
+
+CREATE TABLE `questions` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `question` text,
+  `options` json DEFAULT NULL,
+  `correctAnswer` varchar(255) DEFAULT NULL,
+  `isSelect` tinyint(1) DEFAULT '0',
+  `isTextEditor` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO `questions` VALUES (1,'Etapa 1 / 3','Qual das seguintes opções NÃO é considerada uma das principais responsabilidades de um desenvolvedor backend?','[\"Criar APIs para serem consumidas por front-ends.\", \"Desenvolver a interface visual do aplicativo.\", \"Gerenciar bancos de dados e armazenamento de informações.\", \"Implementar a lógica de negócio da aplicação.\"]','Desenvolver a interface visual do aplicativo.',0,0),(2,'Etapa 2 / 3','Qual das seguintes tecnologias é primariamente utilizada para manipular o DOM (Document Object Model) e criar interfaces dinâmicas em aplicações web?','[\"HTML\", \"CSS\", \"JavaScript\", \"Python\"]','Python',1,0),(3,'Etapa 3 / 3','Por favor, descreva suas experiências anteriores com desenvolvimento backend:',NULL,NULL,0,1);
+
+
+
